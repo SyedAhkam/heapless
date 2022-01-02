@@ -4,6 +4,8 @@ use std::{env, error::Error};
 
 fn main() -> Result<(), Box<dyn Error>> {
     let target = env::var("TARGET")?;
+    
+    println!("Building for target: {}", target);
 
     if target.starts_with("thumbv6m-") {
         println!("cargo:rustc-cfg=armv6m");
