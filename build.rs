@@ -37,7 +37,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         "msp430-none-elf" | "riscv32i-unknown-none-elf" | "riscv32imc-unknown-none-elf" | "avr-atmega328p" => {}
 
         _ => {
-            println!("cargo:rustc-cfg=has_atomics");
+            //println!("cargo:rustc-cfg=has_atomics");
         }
     };
 
